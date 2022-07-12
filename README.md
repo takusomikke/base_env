@@ -28,3 +28,12 @@ pip install -r /opt/backend/app/requirements/develop.txt --user
 django-admin startproject <project_name> .
 ```
 3. Follow the Django manual
+
+# Next.js + TypeScript
+1. Create project
+```
+docker compose run frontend bash
+rm .gitkeep
+rm package.json # If exists.
+npx create-next-app@latest . --ts
+```
