@@ -1,0 +1,15 @@
+version: "3"
+
+services:
+  backend:
+    environment:
+      VUE_DEBUG_PORT: "${VUE_DEBUG_PORT}"
+    ports:
+      - "${DJANGO_DEBUG_PORT}:8000"
+
+  frontend:
+    environment:
+        BACKEND_HOST: "${URL_SCHEME}://${HOST}:${DJANGO_DEBUG_PORT}"
+    ports:
+      - "$VUE_DEBUG_PORT:3000"
+
